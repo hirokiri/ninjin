@@ -1,0 +1,9 @@
+emailjs:
+  user_id: user_xxxxxxx
+  access_token: 3d5798xxxxxx
+  gmail_service_id: service_xxxxxxxx
+  template_id: template_xxxxxxxxxx
+
+our:
+  name: Ossan
+  email: xxxxx@example.com
