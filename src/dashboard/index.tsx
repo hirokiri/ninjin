@@ -1,23 +1,30 @@
 // const path = require('path');
 import React from 'react';
 import {CssBaseline} from '@material-ui/core';
-import {Adb as AdbIcon, Home as HomeIcon} from '@material-ui/icons';
+import {
+  Adb as AdbIcon,
+  Home as HomeIcon,
+  Mail as MailIcon,
+} from '@material-ui/icons';
 
 import {useLocation, useRouteMatch} from 'react-router-dom';
 
-import {SideBar} from './sideBar';
-import {MainBody} from './mainBody';
+import {SideBar} from './SideBar';
+import {MainBody} from './MainBody';
 import {Home} from './contents/Home';
-import {SubComponent} from './contents/sub-component';
+import {SubComponent} from './contents/SubComponent';
+import {Contact} from './contents/contact';
 
 import {Content} from './type';
-import {FooterBar} from './footerBar';
-import {TitleBar} from './titleBar';
+import {FooterBar} from './FooterBar';
+import {TitleBar} from './TitleBar';
 import {createStyles, makeStyles, Theme} from '@material-ui/core/styles';
 import clsx from 'clsx';
+import {config} from '../scripts/config';
 
 
 export const Dashboard = () => {
+  console.log(config);
   const routeMatch = useRouteMatch();
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
@@ -39,6 +46,13 @@ export const Dashboard = () => {
       isExact: false,
       icon: <AdbIcon/>,
       component: <SubComponent name={'Unko'}/>,
+    },
+    {
+      name: 'Contact',
+      path: `${routeMatch.path}contact`,
+      isExact: false,
+      icon: <MailIcon/>,
+      component: <Contact/>
     },
   ];
   const location = useLocation();

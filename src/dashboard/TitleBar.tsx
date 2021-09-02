@@ -18,9 +18,7 @@ type Props = {
 
 export const TitleBar = (props: Props) => {
   const classes = useStyles();
-  console.log(classes);
   const theme = useTheme();
-  console.log(theme.zIndex);
 
   return (
     <AppBar
@@ -44,7 +42,7 @@ export const TitleBar = (props: Props) => {
           <MenuIcon/>
         </IconButton>
         <Typography variant="h5" noWrap>
-          Eight Bloom. Inc.
+          Eight Bloom, Inc.
         </Typography>
       </Toolbar>
     </AppBar>

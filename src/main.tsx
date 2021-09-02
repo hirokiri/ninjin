@@ -3,7 +3,7 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
-import {Dashboard} from './dashboard/dashboard';
+import {Dashboard} from './dashboard';
 
 const App = () => {
   return (
